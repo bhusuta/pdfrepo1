@@ -500,3 +500,87 @@ N=1024;
 faxis= 0:1/N : (N-1)/N;
 fftrect=fft(rect,N);
 ffthan = fft(han,N)
+
+5a and b
+[6:08 am, 21/11/2024] bhusuta: % Define the signals
+n = 0:9;  % Time indices for the rectangular signals
+x = ones(1, 10);  % x(n) = h(n) = u(n) - u(n-10)
+
+% Compute the convolution using conv function
+y = conv(x, x);
+
+% Plot the result
+n_y = 0:(length(y)-1);  % Time indices for the output
+stem(n_y, y);  % Discrete-time plot of y(n)
+xlabel('n');
+ylabel('y(n)');
+title('Convolution of x(n) and h(n) for part (a)');
+[6:08 am, 21/11/2024] bhusuta: 5th Part A
+[6:08 am, 21/11/2024] bhusuta: % Define the sequences
+x = [1, 2];
+h = [1, 2, 4];
+
+% Compute the convolution using conv function
+y = conv(x, h);
+
+% Plot the result
+n_y = 0:(length(y)-1);  % Time indices for the output
+stem(n_y, y);  % Discrete-time plot of y(n)
+xlabel('n');
+ylabel('y(n)');
+title('Convolution of x and h for part (b)');
+
+6 and 7
+b=[1 0]
+a=[1 -0.9]
+[h,w]=freqz(b,a,1024)
+figure;
+subplot(1,2,1);
+zplane(b,a)
+title()
+grid on;
+subplot(2,2,2);
+plot(w,20*log10(abs(h)));
+title();
+xlable('fre)
+ylable(mg)
+grid on;
+subplot(2,2,4)
+plot(w,angle(h)
+title
+x
+y
+grid on;
+
+
+7 
+till figure 
+subplot(2 2 2); manual dft
+stem(0:N-1,abs(x_fft),'filled');
+title
+xlable
+ylable'grid on
+
+subplot(2 2 3); mag fft dft
+stem(0:N-1,abs(x_fft),'filled');
+title
+xlable
+ylable'grid on
+
+phase of manual dft
+subplot(2 2 3); 
+stem(0:N-1,abs(x_manual),'filled');
+title
+xlable=k
+ylable= angle xk
+grid on
+
+plot phase fft dft
+subplot(2 2 4); 
+stem(0:N-1,abs(x_manual),'filled');
+title
+xlable=k
+ylable= angle xk
+grid on
+
+
